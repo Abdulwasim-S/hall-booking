@@ -4,6 +4,11 @@ import { BookedSchema, CustomerSchema, HallSchema } from '../Helpers/MongooseVal
 
 const router = express.Router();
 
+//Welcome page
+router.get("/",async(req,res)=>{
+    res.status(200).json({message:"Hall Booking Task"})
+})
+
 //Adding new hall
 router.post('/addHall',async(req,res)=>{
     
